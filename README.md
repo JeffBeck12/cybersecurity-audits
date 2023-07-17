@@ -60,13 +60,10 @@ By implementing these recommendations, we will enhance our security posture, ach
 ## CyberSecurity Incident Reports 
 
 
-Section 1: Identify the type of attack that may have caused this 
-network interruption
 
 After reviewing the logs in my opinion the website is being Dos attacked. The server is being bombarded with SYN requests causing the server to stop responding. This could be what is called a SYN attack.
  
 
-Section 2: Explain how the attack is causing the website to malfunction
 
 When the website visitors try to establish a connection with the web server, a
 three-way handshake occurs using the TCP protocol. The handshake consists
@@ -84,13 +81,11 @@ Initially, the attacker’s SYN request is answered normally by the web server (
 
 ## CyberSecurity Incident Reports Network Traffic Analysis
 
-Part 1: Provide a summary of the problem found in the DNS and ICMP 
-traffic log
 
 The network protocol analyzer shows that when you send UDP packets and receive an ICMP response returned to your host, the results contain an error message: “udp port 53 unreachable.” Port 53 is used for DNS (Domain Name System) services. DNS is responsible for translating human-readable domain names, like yummyrecipesforme.com, into IP addresses that computers use to communicate over a network. This could be intentional to restrict DNS access or unintentional due to misconfigurations using the Firewall. It could also be the result of a DDOS because of the amount of times the error occurred.
 
  
 
-Part 2: Explain your analysis of the data and provide one solution to implement
 
-The incident occurred between 1:24pm est  and 1:28pm est when several customers contacted us to report that they were not able to access the company website, and saw the error “destination port unreachable” after waiting for the page to load. I loaded my network analyzer tool, tcpdump, and loaded the webpage again.the results contain an error message: “udp port 53 unreachable.” We are continuing to investigate the root cause of the issue to determine how we can restore access to the website. Our next steps are to configure the firewall and block ips with X number of attempts. Contact our  Internet Service Provider (ISP) or hosting provider and inform them about the ongoing DDoS attack to assist with traffic filtering or diverting malicious traffic away from your network.
+
+The incident occurred between 1:24pm est  and 1:28pm est when several customers contacted us to report that they were not able to access the company website, and saw the error “destination port unreachable” after waiting for the page to load. I loaded my network analyzer tool, tcpdump, and loaded the webpage again.the results contain an error message: “udp port 53 unreachable.” We are continuing to investigate the root cause of the issue to determine how we can restore access to the website. Our next steps are to configure the firewall and block ips with X number of attempts. Contact our  Internet Service Provider (ISP) or hosting provider and inform them about the ongoing DDoS attack to assist with traffic filtering or diverting malicious traffic away from the network.
